@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CategoryViewController: UIViewController {
+    @IBOutlet weak var categoryTab: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
