@@ -27,7 +27,18 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @IBOutlet weak var categoryTab: UITableView!
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = Dataservice.ob.getTheCategories()[indexPath.row]
+        performSegue(withIdentifier:"ProductViewController" , sender: category)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let productViewController = segue.destination as? ProductsViewController{
+            assert(sender as? categories != nil)
+            productViewController.initializeProducts(category: sender as! categories)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
