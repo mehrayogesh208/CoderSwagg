@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="176" id="FN5-bx-heD" customClass="categorycell" customModule="CoderSwag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categorycell" rowHeight="176" id="FN5-bx-heD" customClass="categorycell" customModule="CoderSwag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FN5-bx-heD" id="rVg-6Y-2jo">
@@ -47,7 +47,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="Tu5-vz-JMd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="175.66666666666666"/>
+                                                    <rect key="frame" x="0.0" y="3" width="414" height="169.66666666666666"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="169.66999999999999" id="DM3-kx-0mK"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-d5-92K">
                                                     <rect key="frame" x="108" y="54" width="198" height="68"/>
@@ -61,12 +64,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Tu5-vz-JMd" secondAttribute="trailing" id="C5J-ez-AA0"/>
                                                 <constraint firstItem="c4P-d5-92K" firstAttribute="centerY" secondItem="rVg-6Y-2jo" secondAttribute="centerY" id="Dbe-1K-c06"/>
-                                                <constraint firstItem="Tu5-vz-JMd" firstAttribute="leading" secondItem="rVg-6Y-2jo" secondAttribute="leading" id="Ln7-HU-93U"/>
-                                                <constraint firstAttribute="trailing" secondItem="Tu5-vz-JMd" secondAttribute="trailing" id="djb-DG-d7C"/>
-                                                <constraint firstItem="Tu5-vz-JMd" firstAttribute="top" secondItem="rVg-6Y-2jo" secondAttribute="top" id="iUX-l0-MJU"/>
+                                                <constraint firstItem="Tu5-vz-JMd" firstAttribute="leading" secondItem="rVg-6Y-2jo" secondAttribute="leading" id="TD7-2a-j0l"/>
                                                 <constraint firstItem="c4P-d5-92K" firstAttribute="centerX" secondItem="rVg-6Y-2jo" secondAttribute="centerX" id="ofX-t7-KJu"/>
-                                                <constraint firstAttribute="bottom" secondItem="Tu5-vz-JMd" secondAttribute="bottom" id="t6u-MU-Vqb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tu5-vz-JMd" secondAttribute="bottom" constant="3" id="vHg-Qm-tkm"/>
+                                                <constraint firstItem="Tu5-vz-JMd" firstAttribute="top" secondItem="rVg-6Y-2jo" secondAttribute="top" constant="3" id="wZP-iF-hB3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -102,6 +105,13 @@
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.3411764705882353" green="0.15294117647058825" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

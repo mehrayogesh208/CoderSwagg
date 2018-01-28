@@ -8,12 +8,31 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Dataservice.ob.getTheCategories().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "categorycell") as? categorycell{
+            let category = Dataservice.ob.getTheCategories()[indexPath.row]
+            cell.updateViews(category: category)
+            return cell
+        }
+        else{
+            return categorycell()
+        }
+        
+        
+    }
+    
     @IBOutlet weak var categoryTab: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        categoryTab.delegate = self
+        categoryTab.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
